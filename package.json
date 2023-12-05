@@ -1,0 +1,21 @@
+{
+  "name": "cloudron-api-create-user",
+  "version": "1.0.0",
+  "description": "Back en nodeJS pour créer un utilisateur en utilisant l'API de Cloudron",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarcouxDesBois/cloudron-api-create-user.git"
+  },
+  "author": "MarcouxDesBois",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "nodemon": "^3.0.2"
+  }
+}
