@@ -1,0 +1,3 @@
+function createMailbox(req) {
+
+}
