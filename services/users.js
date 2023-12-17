@@ -1,6 +1,7 @@
 const config = process.env;
 const User = require("../models/user")
 const axios = require("axios")
+const {configMailboxe} = require("./mailbox");
 
 const headers = {"Content-Type": "application/json", "Authorization": "Bearer " + config.TOKEN_API}
 
@@ -20,8 +21,10 @@ async function createUser(reqBody) {
     }
 
     let userToAdd = createUserFromBody(reqBody)
-
     userToAdd.id = await createUserOnCloudron(userToAdd)
+
+
+    await configMailboxe(userToAdd)
 
     return "User " + userToAdd.username + " created in Cloudron"
 }
