@@ -1,4 +1,4 @@
-FROM node:latest
+FROM node:alpine
 LABEL authors="MarcouxDesBois"
 WORKDIR /src
 COPY . .
