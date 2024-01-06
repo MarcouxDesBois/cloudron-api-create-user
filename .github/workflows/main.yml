@@ -28,4 +28,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/cloudron-api-create-user/general:latest
+          tags: marcoux/cloudron-api-create-user/general:latest
