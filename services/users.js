@@ -7,7 +7,7 @@ const headers = {"Content-Type": "application/json", "Authorization": "Bearer " 
 
 function createUserFromBody(reqBody) {
     try {
-        return new User(null, reqBody.email, reqBody.fallbackEmail, reqBody.displayName, reqBody.role, reqBody.username, reqBody.isVisitor)
+        return new User(null, (reqBody.isVisitor ? reqBody.fallbackEmail : reqBody.email), reqBody.fallbackEmail, reqBody.displayName, reqBody.role, reqBody.username, reqBody.isVisitor)
     } catch (e) {
         console.log("Can't serialize user")
         console.error(e)
@@ -27,7 +27,9 @@ async function createUser(reqBody) {
        return "User can't be created."
     }
 
-    await configMailboxe(userToAdd)
+    if(!userToAdd.isVisitor){
+        await configMailboxe(userToAdd)
+    }
 
     return "User " + userToAdd.username + " created in Cloudron"
 }
