@@ -11,26 +11,52 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-<div class="jumbotron">
-    <div class="container">
-        <h1>Création d'un utilisateur</h1>
-        <p>Cet outil vous permet de créer un utilisateur d'une manière bien plus simple.</p>
-        <br>
-        <div class="card text-center">
-            <h2 class="card-header">Informations nécessaire</h2>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">Addresse email</li>
-                <li class="list-group-item">Addresse email voulue Babel.Coop</li>
-                <li class="list-group-item">Nom complet</li>
-                <li class="list-group-item">Nom d'utilisateur</li>
-            </ul>
+        <div class="jumbotron">
+            <div class="container text-center">
+                <h1>Création d'un utilisateur</h1>
+                <p>Cet outil vous permet de créer un utilisateur d'une manière bien plus simple.</p>
+                <br>
+                <div class="card text-center">
+                    <h2 class="card-header">Informations nécessaire</h2>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Adresse email perso.</li>
+                        <li class="list-group-item">Adresse email voulue Babel.Coop</li>
+                        <li class="list-group-item">Nom complet</li>
+                        <li class="list-group-item">Nom d'utilisateur</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
-<div class="container">
-    <div class="alert alert-warning text-center" role="alert">
-        Site en construction
-    </div>
-</div>
-</body>
+        <div class="container">
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail2">Email perso.</label>
+                        <input type="email" class="form-control" id="inputEmail2" placeholder="xxx@xxx.xx">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail1">Email babel</label>
+                        <input type="email" class="form-control" id="inputEmail1" placeholder="xxx.xxx@babel.coop">
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputName">Nom complet</label>
+                    <input type="text" class="form-control" id="inputName" placeholder="Dupont Jean">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputUsername">Nom d'utilisateur</label>
+                    <input type="text" class="form-control" id="inputUsername" placeholder="jean.dupont">
+                </div>
+                <div class="form-group">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                        <label class="form-check-label" for="gridCheck">
+                            Visiteur ?
+                        </label>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Création</button>
+            </form>
+        </div>
+    </body>
 </html>
