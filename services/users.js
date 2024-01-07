@@ -19,10 +19,13 @@ async function createUser(reqBody) {
     if(alreadyExist){
         return "User already exist"
     }
-
     let userToAdd = createUserFromBody(reqBody)
-    userToAdd.id = await createUserOnCloudron(userToAdd)
 
+    try {
+       userToAdd.id = await createUserOnCloudron(userToAdd)
+    } catch (e) {
+       return "User can't be created."
+    }
 
     await configMailboxe(userToAdd)
 
@@ -34,6 +37,7 @@ async function createUserOnCloudron(user){
         const result = await axios.post(config.CLOUDRON_URL + config.USERS_API, user, {headers})
         return result.data.id
     } catch (e) {
+        console.log("Creation of user on cloudron error : " + e.response.data.message)
         console.error(e)
     }
 }
