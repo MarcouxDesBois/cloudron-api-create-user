@@ -7,6 +7,7 @@ const userRoute = require('./routes/users')
 
 let path = __dirname + '/views/';
 
+app.use(express.urlencoded({extended: true}))
 app.use(express.json())
 
 app.use('/api/user', userRoute)

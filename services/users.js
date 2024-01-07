@@ -39,11 +39,15 @@ async function createUserOnCloudron(user){
 }
 
 async function findUser(username){
-    try {
-        const result = await axios.get(config.CLOUDRON_URL + config.USERS_API, {headers, params: {"search": username}})
-        return result.data.users.length > 0
-    } catch (e) {
-        console.error(e)
+    if(username === undefined){
+        console.log("Please provide a username.")
+    } else {
+        try {
+            const result = await axios.get(config.CLOUDRON_URL + config.USERS_API, {headers, params: {"search": username}})
+            return result.data.users.length > 0
+        } catch (e) {
+            console.error(e)
+        }
     }
 }
 

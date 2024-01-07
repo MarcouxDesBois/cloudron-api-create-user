@@ -28,29 +28,29 @@
             </div>
         </div>
         <div class="container">
-            <form>
+            <form action="/api/user" method="post">
                 <div class="form-row">
                     <div class="form-group col-md-6">
-                        <label for="inputEmail2">Email perso.</label>
-                        <input type="email" class="form-control" id="inputEmail2" placeholder="xxx@xxx.xx">
+                        <label for="fallbackEmail">Email perso.</label>
+                        <input type="email" class="form-control" id="fallbackEmail" name="fallbackEmail" placeholder="xxx@xxx.xx">
                     </div>
                     <div class="form-group col-md-6">
-                        <label for="inputEmail1">Email babel</label>
-                        <input type="email" class="form-control" id="inputEmail1" placeholder="xxx.xxx@babel.coop">
+                        <label for="email">Email babel</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="xxx.xxx@babel.coop">
                     </div>
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="inputName">Nom complet</label>
-                    <input type="text" class="form-control" id="inputName" placeholder="Dupont Jean">
+                    <label for="displayName">Nom complet</label>
+                    <input type="text" class="form-control" id="displayName" name="displayName" placeholder="Dupont Jean">
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="inputUsername">Nom d'utilisateur</label>
-                    <input type="text" class="form-control" id="inputUsername" placeholder="jean.dupont">
+                    <label for="username">Nom d'utilisateur</label>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="jean.dupont">
                 </div>
                 <div class="form-group">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="gridCheck">
-                        <label class="form-check-label" for="gridCheck">
+                        <input class="form-check-input" type="checkbox" name="isVisitor" id="isVisitor">
+                        <label class="form-check-label" for="isVisitor">
                             Visiteur ?
                         </label>
                     </div>
