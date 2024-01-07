@@ -1,6 +1,6 @@
 {
   "name": "cloudron-api-create-user",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Back en nodeJS pour créer un utilisateur en utilisant l'API de Cloudron",
   "main": "index.js",
   "scripts": {
