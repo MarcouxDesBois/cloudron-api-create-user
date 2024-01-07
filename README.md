@@ -14,8 +14,15 @@ For development, you will only need Node.js and npm.
 
 Create `.env` then edit it with your settings. You will need:
 
-- your cloudron url;
-- token for cloudron api;
+````dotenv
+TOKEN_API=your token
+
+CLOUDRON_URL=url of your server
+USERS_API=/users
+GROUPS_API=/groups
+INVITE_EMAIL_API=/send_invite_email
+EMAIL_API=api for your mail service
+````
 
 ## Running the project
 
